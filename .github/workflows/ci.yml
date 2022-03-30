@@ -32,9 +32,9 @@ jobs:
         with:
           path: ~/go/pkg/mod
           key: ${{ matrix.os }}-go-${{ hashFiles('**/go.sum') }}
-      - run: make all
+      - run: make erigon sentry txpool rpcdaemon
       - name: Upload binary
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ matrix.os }}
+          name: ${{ matrix.os }} ${{ github.sha	}}
           path: build/bin

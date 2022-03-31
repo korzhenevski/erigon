@@ -1,6 +1,7 @@
 [submodule "tests"]
 	path = tests/testdata
 	url = https://github.com/ethereum/tests
+	update = none
 [submodule "libmdbx"]
 	path = libmdbx
 	url = https://github.com/erthink/libmdbx
